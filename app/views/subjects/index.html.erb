@@ -1,0 +1,21 @@
+<h1>  Materias </h1>
+
+<%= link_to 'Aula de clases', controller: 'subjects' %>
+<%= link_to 'New subject', new_subject_path %>
+
+
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+ 
+  <% @subjects.each do |subject| %>
+    <tr>
+      <td><%= subject.nombre %></td>
+      <td><%= link_to 'Show', subject_path(subject) %></td>
+      <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+      <td><%= link_to 'Destroy', subject_path(subject),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

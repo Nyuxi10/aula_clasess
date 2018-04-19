@@ -1,0 +1,21 @@
+
+
+ 
+
+<%= form_for(model: [@note, @note.subjects.build],local: true) do |f| %>
+
+
+  <p>
+    <%= f.label :Materia %><br>
+    <%= f.text_field :nombre %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+
+ 
+<% end %>
+
+

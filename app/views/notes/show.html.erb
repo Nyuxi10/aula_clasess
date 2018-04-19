@@ -1,0 +1,30 @@
+
+
+<h1>  El nota agregada fue </h1>
+
+  <p>
+    <strong>Nota:</strong>
+    <%= @note.valor %>
+  </p>
+
+
+
+<h2>ssss</h2>
+<%= render @note.subjects %>
+
+<h2>Añadir una matera:</h2>
+<%= render "subjects/form" %>
+
+
+
+ 
+
+
+
+ 
+<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_note_path(@note) %>
+
+ 
+
+

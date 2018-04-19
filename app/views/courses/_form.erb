@@ -1,0 +1,30 @@
+
+
+
+<%= form_for @course do |f| %>
+
+
+<% if @course.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@course.errors.count, "error") %> when entering data:</h2>
+    <ul>
+    <% @course.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label :Curso %><br>
+    <%= f.text_field :nombre %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+
